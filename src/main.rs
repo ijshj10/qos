@@ -14,7 +14,7 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 #[no_mangle]
 #[naked]
 pub extern "C" fn Reset() -> ! {
-    /// Setup stack
+    // Setup stack
     unsafe { asm!("mov sp, 0x200000"); }
 
 
